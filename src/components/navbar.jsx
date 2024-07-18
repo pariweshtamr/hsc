@@ -93,19 +93,14 @@ export const Navbar = () => {
       } ${showNavbar && !top && !isOpen && "top-0 backdrop-blur-md"}`}
     >
       <div className="w-full flex justify-between mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex items-center"
-        >
+        <Link href={"/"} className="flex items-center">
           <Image alt="logo" src={"/logo.png"} width={100} height={100} />
-        </motion.div>
+        </Link>
 
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className={`${roboto.className} font-bold text-md flex items-center gap-5`}
         >
           <Link href={"/"}>FAQs</Link>

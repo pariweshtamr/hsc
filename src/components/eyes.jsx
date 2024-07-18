@@ -47,10 +47,10 @@ export const Eyes = ({ className }) => {
       {[...Array(2)].map((_, index) => (
         <div
           key={index}
-          className="flex items-center justify-center w-[12vw] h-[12vw] rounded-full bg-[#f1f1f1]"
+          className="flex items-center justify-center w-[12vw] h-[12vw] rounded-full bg-white"
         >
           <div
-            className="relative flex items-center justify-center w-[62%] h-[62%] rounded-full bg-[#212121]"
+            className="relative flex items-center justify-center w-[62%] h-[62%] rounded-full bg-customBlack"
             style={{
               transform: `translate(${pupilPosition.x}px, ${pupilPosition.y}px)`,
             }}
@@ -61,7 +61,7 @@ export const Eyes = ({ className }) => {
                 transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
               }}
             >
-              <div className="w-3 h-3 md:w-5 md:h-5 rounded-full bg-[#f1f1f1]"></div>
+              <div className="w-3 h-3 md:w-5 md:h-5 rounded-full bg-white"></div>
             </div>
           </div>
         </div>

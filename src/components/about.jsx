@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 export const About = () => {
@@ -6,13 +7,12 @@ export const About = () => {
       data-scroll
       data-scroll-speed=".2"
       data-scroll-offset="0, 100%"
-      className="w-full pt-16 md:py-32 bg-[#CDEA67] rounded-2xl text-[#212121] font-medium z-20 relative -mt-[15vh]"
+      className="w-full pt-16 md:py-32 bg-accentBright rounded-2xl text-[#212121] font-medium z-20 relative -mt-[15vh]"
     >
       <div className="px-6 md:px-14 2xl:px-32 pb-12">
         <h1 className="text-3xl lg:text-[3.52vw] lg:leading-[3.55vw] md:w-[80%]">
-          Ochi is a strategic partner for fast-grow­ing tech businesses that
-          need to raise funds, sell prod­ucts, ex­plain com­plex ideas, and hire
-          great peo­ple.
+          THS is a digital success partner for start up ventures that need web
+          solutions for growth and success.
         </h1>
       </div>
 
@@ -23,13 +23,15 @@ export const About = () => {
         <div className="flex-1 flex flex-col gap-6 lg:flex-row justify-between font-light">
           <div className="flex flex-col flex-1 gap-10 text-lg lg:text-[15px]">
             <p>
-              We create tailored presentations to help you persuade your
-              colleagues, clients, or investors. Whether it’s live or digital,
-              delivered for one or a hundred people.
+              We develop custom web applications to help you engage your
+              customers, streamline your operations, or attract investors.
+              Whether it&apos;s a simple landing page or a complex interactive
+              platform, built for a handful or thousands of users.
             </p>
             <p>
-              We believe the mix of strategy and design (with a bit of coffee)
-              is what makes your message clear, convincing, and captivating.
+              We believe the blend of innovation and design (with a touch of
+              creativity) is what makes your web presence impactful, intuitive,
+              and scalable.
             </p>
           </div>
           <div className="flex-1 flex flex-col lg:items-center justify-end">
@@ -71,7 +73,9 @@ export const About = () => {
             </div>
           </button>
         </div>
-        <div className="flex-1 bg-[#9bac5d] rounded-xl lg:h-[480px]"></div>
+        <div className="flex-1 bg-[#9bac5d] rounded-xl lg:h-[480px] relative overflow-hidden">
+          <Image src={"/about-bg.jpg"} fill alt="" />
+        </div>
       </div>
     </div>
   )

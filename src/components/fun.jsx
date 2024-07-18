@@ -6,10 +6,14 @@ export const Fun = () => {
       <div
         data-scroll
         data-scroll-speed="-.4"
-        className="relative w-full h-full bg-cover bg-[url('/fun.jpg')]"
+        className="relative w-full h-full bg-cover bg-gray-200"
       >
-        <Eyes />
+        <div className="bg-customWhite absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[50%] w-[60%] rounded-2xl">
+          <Eyes />
+        </div>
       </div>
     </div>
   )
 }
+
+// bg-[url('/fun.jpg')]

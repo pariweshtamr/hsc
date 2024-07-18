@@ -16,16 +16,15 @@ export const Footer = () => {
       <div className="flex flex-col lg:flex-row">
         <div className={`flex-1 flex flex-col justify-between`}>
           <div>
-            <h1 className="text-6xl leading-[54px] lg:text-[9vw] uppercase lg:leading-[6.5vw] font-bold">
-              Eye-
-            </h1>
-            <h1 className="text-6xl leading-[54px] lg:text-[9vw] uppercase lg:leading-[6.5vw] font-bold">
-              Opening
+            <h1 className="text-6xl leading-[54px] lg:text-[7.5vw] uppercase lg:leading-[6.5vw] font-bold">
+              Stunning
             </h1>
           </div>
         </div>
         <div className="flex-1 flex flex-col gap-10">
-          <h1 className="hidden lg:block text-[8.2vw] uppercase leading-[6.5vw] font-bold">
+          <h1
+            className={`hidden lg:block text-[7.5vw] uppercase leading-[6.5vw] font-bold`}
+          >
             Web Applications
           </h1>
           <h1 className="lg:hidden text-6xl leading-[54px] lg:text-[9vw] uppercase lg:leading-[6.5vw] font-bold">

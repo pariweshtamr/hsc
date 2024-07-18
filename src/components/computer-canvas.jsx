@@ -1,5 +1,5 @@
 "use client"
-import { Suspense, useEffect, useState } from "react"
+import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 import { CanvasLoader } from "./canvas-loader"
@@ -7,7 +7,8 @@ const Computer = () => {
   const computer = useGLTF("/desktop_pc/scene.gltf")
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
+      <ambientLight intensity={1} />
+      <hemisphereLight intensity={0.5} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight
         position={[-20, 500, 10]}
@@ -21,7 +22,7 @@ const Computer = () => {
         object={computer.scene}
         scale={0.75}
         position={[0, -1, -0.4]}
-        rotation={[-0.01, -0.9, -0.1]}
+        rotation={[-0.01, -0.9, -0.15]}
       />
     </mesh>
   )

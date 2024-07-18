@@ -1,6 +1,9 @@
 import { motion } from "framer-motion"
 import { Roboto_Condensed } from "next/font/google"
 import { ComputerCanvas } from "./computer-canvas"
+import { BiLogoFacebook, BiLogoInstagram, BiPhoneCall } from "react-icons/bi"
+import { PiCode } from "react-icons/pi"
+
 const roboto = Roboto_Condensed({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -30,27 +33,23 @@ export const Hero = () => {
       data-scroll
       data-scroll-speed="-.7"
       data-scroll-ignore-fold
-      className="w-full h-screen bg-[#f1f1f1] pt-1"
+      className="w-full h-screen bg-[#f1f1f1] pt-1 relative"
     >
+      <motion.div
+        initial={{ x: "100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1.5, ease: "easeIn" }}
+        className="absolute w-14 h-40 bg-[#ee4747] right-0 top-[15%] -translate-y-1/2 text-customWhite flex flex-col items-center justify-between py-4"
+      >
+        <h5 className="font-semibold text-2xl">S.</h5>
+        <div className="flex flex-col gap-3 text-xl">
+          <BiLogoFacebook />
+          <BiLogoInstagram />
+          <BiPhoneCall />
+        </div>
+      </motion.div>
       <div className="h-[50vh] md:h-max">
         <div className="px-6 flex flex-col gap-16 mt-32 mb-8 md:mt-0 md:mb-0 md:px-14 2xl:px-32 lg:gap-0 lg:items-center lg:flex-row lg:h-[500px] lg:my-20 2xl:h-[700px]">
-          {/* {["We Create", "Eye Opening", "Web Applications"].map((text, i) => (
-          <div className="masker" key={text}>
-            <div className="w-fit flex items-end overflow-hidden">
-              {i === 1 && (
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: "9vw" }}
-                  transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                  className="mr-[1vw] w-[9vw] relative h-[5.7vw] bg-green-400 rounded-lg"
-                ></motion.div>
-              )}
-              <h1 className="uppercase text-[9vw] text-[#212121] leading-[6.7vw] tracking-tight  font-semibold">
-                {text}
-              </h1>
-            </div>
-          </div>
-        ))} */}
           <div className="flex-1 relative lg:h-max w-full">
             <div className="font-bold md:leading-[90px] relative flex flex-col cursor-default">
               <motion.h1
@@ -58,7 +57,7 @@ export const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.6 }}
                 data-text="WEB"
-                className="relative glitch uppercase text-5xl text-[#212121] tracking-wide font-semibold lg:text-[7vw] lg:leading-[6vw]"
+                className="relative glitch uppercase text-5xl text-[#212121] tracking-normal font-semibold lg:text-[7vw] lg:leading-[6vw]"
               >
                 WEB
               </motion.h1>
@@ -69,7 +68,7 @@ export const Hero = () => {
                     animate={{ opacity: 1 }}
                     transition={getTransition(i)}
                     data-text={item}
-                    className={`relative lg:ml-3 glitch uppercase text-5xl text-[#212121] tracking-normal font-semibold lg:text-[7vw] lg:leading-[6vw] lg:tracking-tighter`}
+                    className={`relative lg:ml-3 glitch uppercase text-5xl text-[#212121] tracking-normal font-semibold lg:text-[7vw] lg:leading-[6vw] lg:tracking-[-0.1em]`}
                     key={i}
                   >
                     {item}
@@ -77,9 +76,9 @@ export const Hero = () => {
                 ))}
                 <motion.span
                   initial={{ opacity: 0, width: 0 }}
-                  animate={{ opacity: 1, width: "110px" }}
+                  animate={{ opacity: 1, width: "100px" }}
                   transition={{ duration: 0.5, delay: 1.4 }}
-                  className="h-[20px] w-[110px] bg-[#212121] absolute right-[130px] top-[48%] -translate-y-1/2 hidden lg:block"
+                  className="h-[20px] w-[100px] bg-[#212121] absolute right-[170px] top-[48%] -translate-y-1/2 hidden lg:block"
                 />
                 <motion.span
                   initial={{ opacity: 0, width: 0 }}
@@ -95,15 +94,29 @@ export const Hero = () => {
                 />
               </div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: -90 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.6 }}
-                data-text="ION"
-                className="relative lg:ml-3 glitch uppercase text-5xl text-[#212121] tracking-tighter font-semibold lg:text-[7vw] lg:leading-[6vw]"
-              >
-                ION
-              </motion.h1>
+              <div className="flex items-start">
+                <motion.div
+                  initial={{ width: 0, opacity: 0 }}
+                  animate={{ width: "6vw", opacity: 1 }}
+                  transition={{
+                    // ease: [0.76, 0, 0.24, 1],
+                    duration: 0.5,
+                    delay: 2.5,
+                  }}
+                  className="w-[6vw] flex items-center justify-center relative h-[5vw] bg-accentBright rounded-lg"
+                >
+                  <PiCode className="text-5xl text-primaryDark font-bold" />
+                </motion.div>
+                <motion.h1
+                  initial={{ opacity: 0, y: -90 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.6 }}
+                  data-text="ION"
+                  className="relative lg:ml-3 glitch uppercase text-5xl text-[#212121] tracking-normal font-semibold lg:text-[7vw] lg:leading-[6vw]"
+                >
+                  ION
+                </motion.h1>
+              </div>
             </div>
 
             <div className="absolute right-0 lg:right-[80px] bottom-6 lg:bottom-[16px]">
@@ -131,7 +144,7 @@ export const Hero = () => {
       </div>
 
       <div className="border-t-[1px] border-[#B2B2B2] py-4">
-        <div className="text-sm lg:text-md flex flex-col gap-6 lg:gap-0 lg:flex-row lg:justify-between px-6 md:px-14 2xl:px-32">
+        <div className="text-sm lg:text-md xl:text-lg flex flex-col gap-6 lg:gap-0 lg:flex-row lg:justify-between px-6 md:px-14 2xl:px-32">
           <p className="tracking-tight">For start up companies</p>
 
           <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:items-center">
